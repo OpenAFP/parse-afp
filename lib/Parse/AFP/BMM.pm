@@ -5,7 +5,9 @@ package Parse::AFP::BMM;
 use base 'Parse::AFP::Record';
 
 use constant SUBFORMAT => (
-    Data => 'a*',    # not yet parsed!
+    MediumMapName   => 'a8',
 );
+use constant ENCODED_FIELDS => ('MediumMapName');
+use constant ENCODING => 'cp500';
 
 1;

@@ -1,11 +1,13 @@
-# $URL: //local/member/autrijus/Parse-AFP/lib/Parse/AFP/BFM.pm $ $Author: autrijus $
-# $Rev: 1130 $ $Date: 2004-02-17T15:40:29.640821Z $
+# Begin Form Map (BFM)
 
 package Parse::AFP::BFM;
 use base 'Parse::AFP::Record';
 
 use constant SUBFORMAT => (
-    Data => 'a*',    # not yet parsed!
+    FMName    => 'a8',
+    'Triplet'   => [ 'C/a* X', '*' ],
 );
+use constant ENCODED_FIELDS => ('FMName');
+use constant ENCODING => 'cp500';
 
 1;

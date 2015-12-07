@@ -1,11 +1,13 @@
-# $URL: //local/member/autrijus/Parse-AFP/lib/Parse/AFP/BPG.pm $ $Author: autrijus $
-# $Rev: 1130 $ $Date: 2004-02-17T15:40:29.640821Z $
+# Begin Page (BPG)
 
 package Parse::AFP::BPG;
 use base 'Parse::AFP::Record';
 
 use constant SUBFORMAT => (
-    Data => 'a*',    # not yet parsed!
+    PageName    => 'a8',
+    'Triplet'   => [ 'C/a* X', '*' ],
 );
+use constant ENCODED_FIELDS => ('PageName');
+use constant ENCODING => 'cp500';
 
 1;
